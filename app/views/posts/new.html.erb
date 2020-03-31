@@ -1,5 +1,5 @@
-<h2>Editing "<%= @post.title %>"</h2>
-<%= form_tag post_path(@post), method: "patch" do %>
+Create a Post
+<%= form_tag("/posts") do %>
 
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -33,12 +33,4 @@
     <%= text_area_tag "content", @post.content %>
   </div>
   <%= submit_tag "Update" %>
-
-  <div class="field">
-    <%= label_tag "content", "Content" %>
-    <br />
-    <%= text_area_tag "content", @post.content %>
-  </div>
-  <%= submit_tag "Update" %>
 <% end %>
-
